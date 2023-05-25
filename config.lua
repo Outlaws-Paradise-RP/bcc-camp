@@ -11,8 +11,8 @@ Config.CampBlips = {
 
 Config.CampRadius = 30 --radius you will be able to place props inside
 Config.CampCommand = true --If true you will set your tent via command (do not have this and camp item enabled at the same time use one or the other)
-Config.CampItem = { enabled = false, CampItem = 'water', RemoveItem = true } --if enabled is true then you will need to use the CampItem to set tent make sure the item exists in your database if removeitem is true it will remove 1 of the item from the players inventory when they set camp
-Config.CommandName = 'SetTent' --name of the command to set the tent
+Config.CampItem = { enabled = true, CampItem = 'tent', RemoveItem = false } --if enabled is true then you will need to use the CampItem to set tent make sure the item exists in your database if removeitem is true it will remove 1 of the item from the players inventory when they set camp
+Config.CommandName = 'settent' --name of the command to set the tent
 Config.SetCampInTowns = true --If false players will be able to set camp inside of towns
 Config.Cooldown = true --if enabled the cooldown will be active
 Config.CooldownTime = 1800000 --time in ms before the player can set a camp again
@@ -40,6 +40,34 @@ Config.FastTravel = {
             name = 'Black Water',
             coords = {x = -854.39, y = -1341.26, z = 43.45},
         },
+        {
+            name = 'Armadillo', --name that will show on the menu
+            coords = {x = -3739.04, y = -2605.2, z = -13.23}, --coords to tp player too
+        },
+        {
+            name = 'Tumbleweed', --name that will show on the menu
+            coords = {x = -5494.44, y = -2956.46, z = -0.72}, --coords to tp player too
+        },
+        {
+            name = 'Strawberry', --name that will show on the menu
+            coords = {x = -1837.44, y = -425.83, z = 160.46}, --coords to tp player too
+        },
+        {
+            name = 'Rhodes', --name that will show on the menu
+            coords = {x = 1247.33, y = -1311.07, z = 76.89}, --coords to tp player too
+        },
+        {
+            name = 'Saint Denis', --name that will show on the menu
+            coords = {x = 2761.37, y = -1390.19, z = 46.27}, --coords to tp player too
+        },
+        {
+            name = 'Van Horn', --name that will show on the menu
+            coords = {x = 2894.47, y = 628.84, z = 57.72}, --coords to tp player too
+        },
+        {
+            name = 'Annesburg', --name that will show on the menu
+            coords = {x = 2942.49, y = 1282.06, z = 44.63}, --coords to tp player too
+        },
     }
 }
 
@@ -49,43 +77,29 @@ Config.Furniture = {
     Campfires = { --campfire hash
         {
             hash = 'p_campfire01x', --model of fire
-            name = 'Large Campfire', -- Name for Menu
-        },
-        {
-            hash = 'p_campfire05x',
-            name = 'Small Campfire',
         },
     },
     Benchs = {
         {
             hash = 'p_bench_log03x',
-            name = 'Log Bench',
-        },
-        {
-            hash = 'p_ambchair02x',
-            name = 'Small Camp Chair',
         },
     },
     HitchingPost = {
         {
             hash = 'p_hitchingpost01x',
-            name = 'Double Hitching Post',
         },
     },
     Tent = {
         {
             hash = 'p_ambtentscrub01b',
-            name = 'Small Tent',
         },
         {
             hash = 'p_ambtentgrass01x',
-            name = 'Medium Tent',
         },
     },
     StorageChest = {
         {
             hash = 'p_chest01x',
-            name = 'Storage Chest',
         },
     },
 }
@@ -131,7 +145,6 @@ Config.Language = {
     StorageChestSetup = 'Placing Storage Chest! ',
     HitchingPostSetup = 'Setting up the hitching post! ',
     FastTravelPostSetup = 'Settin up the fast travel post! ',
-    RemoveFire = 'Press "BACKSPACE" to Remove The Camp Fire',
 
     --Camp Setup Translations
     CantBuild = 'You can not build here!',
